@@ -1,0 +1,5 @@
+admin:admin
+Admin:Admin
+a:a
+msfadmin:msfadmin
+Winer:Peter

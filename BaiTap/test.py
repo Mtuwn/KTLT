@@ -13,7 +13,8 @@ password = "16040312b"
 subprocess.run(["mstsc", "/v:" + remote_host])
 
 
-# Đợi một chút để cửa sổ kết nối RDP hiện ra
+# Đợi một chút để cửa sổ kết nối RDP hiện ra trantuan    16040312b
+
 time.sleep(5)
 
 # Sử dụng pyautogui để nhập tên người dùng và mật khẩu

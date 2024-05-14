@@ -5,7 +5,7 @@ portScanner = nmap.PortScanner()
 # Xác định địa chỉ ip muốn quét 
 hostScan = input("Host Scan: ")
 # quét các cổng 21 (FTP), 23 (Telnet), 80 (HTTP), và 3389 (Remote Desktop Protocol)
-portList = "20,21,22,23,80,3389"
+portList = "20,21,22,23,80,3389,135"
 # -n: Không thực hiện giải quyết tên miền. Điều này có thể giúp tăng tốc độ quét bằng cách tránh giải quyết địa chỉ IP thành tên miền.
 #-p: port
 #-sS: quét tcp gửi gói syn
@@ -13,6 +13,7 @@ portList = "20,21,22,23,80,3389"
 #-O: xác định hệ điều hành máy chủ
 #-sP: Quét để xác định các host hoạt động
 # -PA21,23,80,3389: Gửi gói tin TCP ACK đến các cổng 21 (FTP), 23 (Telnet), 80 (HTTP), và 3389 (Remote Desktop Protocol)
+
 portScanner.scan(hosts=hostScan,arguments=f"-n -p{portList}")
 # In ra các dòng lệnh mà bạn đã sử dụng bao gồm cả tên chương trình và đối số truyền vào
 print(portScanner.command_line())
